@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <form onsubmit="processForm(event)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Nome <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Telefone <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input ion-text required type="text" oninput="handleLastNameValue(event)" color="dark"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Endereco</ion-label>
+        <ion-input placeholder="Endereço (rua e numero)"></ion-input>
+        <ion-input placeholder="Bairro"></ion-input>
+        <ion-input placeholder="CEP"></ion-input>
+        
+      </ion-item>
+      <ion-item>
+        <ion-label position= "user">Usuario <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position= "user">Senha<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="password" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+      </form>
+      <ion-button shape = "round" expand="block" color ="dark"[routerLink]="['/pagina2']" routerDirection="forward">CADASTRAR</ion-button>
+</ion-content>
